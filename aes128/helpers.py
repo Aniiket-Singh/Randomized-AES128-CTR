@@ -15,3 +15,9 @@ def bytes_to_matrix(text):
 
 def matrix_to_bytes(matrix):
     return bytes(sum(matrix, []))
+
+def xor_bytes(a, b):
+    return bytes(x ^ y for x, y in zip(a, b))
+
+def int_to_bytes(n, length=16):
+    return n.to_bytes(length, byteorder='big')
